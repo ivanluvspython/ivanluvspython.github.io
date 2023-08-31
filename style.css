@@ -1,0 +1,88 @@
+body {
+    background: rgb(0, 0, 0);
+    color: rgb(231, 231, 231);
+    padding: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-width: 30;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+}
+#all-contents {
+  max-width: 80px;
+    margin: auto;
+}
+
+/* navigation menu */
+nav {
+    background: rgb(210, 144, 191);
+   margin: 0 auto;
+    display: flex;
+    padding: 2px;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    flex: 2;
+    margin: 0;
+    border-width: 40;
+    border-radius: 10px;
+    border-style: double;
+    border-color: rgb(0, 0, 0);
+}
+#nav-ul {
+    list-style-image:none;
+}
+.nav-li {
+    display: inline-block;
+    padding: 10px;
+    
+}
+a {
+    text-decoration: rgb(179, 32, 32);
+    color: #ffffff;
+ font-size: 30px;
+ 
+}
+
+/* main container area beneath menu */
+main {
+    background: rgb(0, 0, 0);
+    display: flex;
+}
+.sidebar {
+    margin-right: 20px;
+    padding: 10px;
+    
+    
+}
+.sidebar-img {
+    width: 10px;
+    max-width: 10px;
+    height: auto;
+    
+}
+.content {
+    flex: 1;
+    padding: 10px;
+}
+
+/* portfolio styles */
+#interests {
+    border: 4px rgb(255, 255, 255) ridge;
+    padding: 8px;
+    text-align: right;
+    border-width: 30;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+}
+h2, h3, h4 {
+    margin: 0px;
+    text-align: center;
+    border: outset;
+    border-width: 30;
+    border-style: double;
+    border-color: rgba(181, 73, 73, 0.759);
+}
