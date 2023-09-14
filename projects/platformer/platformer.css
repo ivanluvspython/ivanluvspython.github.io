@@ -3,7 +3,7 @@ body {
 }
 
 canvas {
-  background-color: lightgray;
+  background-image: src("https://i.pinimg.com/originals/03/13/7d/03137dde3c4be7547fb42209009cbf66.gif");
 }
 
 img {
