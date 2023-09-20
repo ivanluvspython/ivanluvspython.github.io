@@ -48,9 +48,12 @@ $(function () {
     createPlatform(300, 450, 100, 10);
     createPlatform(400, 325, 100, 10);
     createPlatform(100, 200, 2000, 10);
+    createPlatform(100, 200, 10, 200)
     createPlatform(600, 325, 100, 10);
     createPlatform(700, 450, 100, 10);
     createPlatform(800, 325, 100, 10);
+    createPlatform(900, 450, 100, 10);
+    createPlatform(1000, 575, 100, 10);
      // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
      // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
     
@@ -59,8 +62,8 @@ $(function () {
     // You must decide on the collectable type, the x position, the y position, the gravity, and the bounce strength
     // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
     // example usage: createCollectable(type, x, y, gravity, bounce)
-    createCollectable("steve", 200, 200, 0, 0); // creates a "steve" collectible at the coordinates (500, 300), falling with a high gravity of 20, and bouncing with 50% bounce
-    createCollectable("grace", 500, 300); 
+    createCollectable("steve", 600, 375, 0, 0); // creates a "steve" collectible at the coordinates (500, 300), falling with a high gravity of 20, and bouncing with 50% bounce
+    createCollectable("grace", 300, 460); 
     createCollectable("steve", 500, 500, 0,0)
 
     // creates a "grace" collectible at the coordinates (500, 300), falling with default gravity and bouncing with default bounce %
@@ -75,8 +78,8 @@ $(function () {
 
      // cannon on left wall, 600px down, shooting once per second
      createCannon("left", 300, 2000);
-     createCannon("right", 500, 2000);
-
+     createCannon("right", 400, 2000);
+     createCannon("right", 600, 2000)
     /////////////////////////////////////////////////
     //////////ONLY CHANGE ABOVE THIS POINT///////////
     /////////////////////////////////////////////////
