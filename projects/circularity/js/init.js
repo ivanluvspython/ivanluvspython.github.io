@@ -65,6 +65,8 @@ game.checkCirclePosition(circles[2]);
 game.checkCirclePosition(circles[3]);
 game.checkCirclePosition(circles[4]);
 
+
+
             // TODO 9 : Iterate over the array
            
             
@@ -83,7 +85,18 @@ game.checkCirclePosition(circles[4]);
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            
+            game.checkCirclePosition = function (circle) {
+                // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
+                if (circle.x > canvas.width) {
+                  circle.x = 0;
+                }
+              
+                // TODO 7 : YOUR CODE STARTS HERE //////////////////////
+              
+                /* Your conditional statements HERE */
+              
+                // YOUR TODO 7 CODE ENDS HERE //////////////////////////
+              };
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
