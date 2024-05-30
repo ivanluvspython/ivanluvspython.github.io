@@ -10,7 +10,7 @@
             border-radius: 15px;
         }
         #all-contents {
-          max-width: 80px;
+          max-width: 800px;
             margin: auto;
         }
         
@@ -50,7 +50,7 @@
         }
         
          .content h1 {
-            color: black;
+            color: rgb(255, 255, 255);
         }
 
         #portfolio {
@@ -71,5 +71,5 @@
 
         #portfolio a {
             text-decoration: none;
-            color: #454545;
+            color: #000000;
         }
