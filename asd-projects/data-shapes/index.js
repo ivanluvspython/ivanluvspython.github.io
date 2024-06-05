@@ -91,12 +91,15 @@ handleStatic(dataShapes[currentIndex])
 
   function goodDisplay() {
     // TODO 4-b: call your handleGood function
-handleGood(dataShapes[currentIndex])
+    var currentShape = dataShapes[currentIndex]
+    console.log(currentShape)
+handleGood(currentShape.color, currentShape.shape, currentShape.repeat)
   }
 
   function badDisplay() {
     // TODO 5-b: call your handleBad function
-handleBad(dataShapes[currentIndex])
+    var currentShape = dataShapes[currentIndex]
+handleBad(currentShape, currentShape.repeat)
   }
 
   /////////////////////////////////////////////////
