@@ -68,7 +68,7 @@ function init() {
  */
 function update() {
   // TODO 5b: Fill in the update function's code block
-  function update() {
+  {
     moveSnake();
 
     if (hasHitWall() || hasCollidedWithSnake()) {
@@ -131,7 +131,10 @@ function moveSnake() {
     snake.head.column = snake.head.column + 1;
   }
   else if (snake.head.direction === "up") {
-    snake.head.column = snake.head.column 
+    snake.head.row = snake.head.row - 1;
+  }
+  else if (snake.head.direction === "down") {
+    snake.head.row = snake.head.row + 1;
   }
 
   repositionSquare(snake.head);

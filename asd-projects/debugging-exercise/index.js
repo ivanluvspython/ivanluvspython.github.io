@@ -19,7 +19,7 @@ var circleRadius = 10;
 
 // this gets the whole thing going;
 // it creates a number of circles both in JavaScript and in the HTML of the website
-for(var i = 0; i > maxCircles; i++){
+for(var i = 0; i < maxCircles; i++){
     var newId = getId(i);
     var newCircle = makeCircle(newId);
     circles.push(newCircle);
@@ -91,7 +91,7 @@ function update(){
     // circles.length, but do NOT change it here)
    
     for (var i = 0; i < maxCircles; i++){
-        debugger;
+     console.log(circles)
         var circle = circles[i];
 
         // move the circle
@@ -111,7 +111,7 @@ function update(){
 
 // this moves circles in memory but doesn't update them on the screen
 function moveCircle(circle){
-    circle.x = circle.speedX;
+    circle.x += circle.speedX;
     circle.y += circle.speedY;
 }
 
@@ -129,20 +129,20 @@ function bounceCircle(circle){
         circle.speedX *= -1;
     }
     // this bounces off the top wall
-    if (circle.y < 0){
+      if (circle.y < 0){
         circle.y -= circle.speedY;
         circle.speedY *= -1;
     }
     // this bounces off the bottom wall
     else if (circle.y > boardHeight){
         circle.y -= circle.speedY;
-        circle.speedX *= -1;
+        circle.speedY *= -1;
     }
 }
 
 // this redraws the circle's position on the screen
 function updateCircleOnScreen(circle){
-    maxCircles = 0;
+   // maxCircles = [];
 
     // these lines redraw the circle's position
     $(circle.id).css('left', circle.x);
