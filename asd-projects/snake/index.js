@@ -101,7 +101,7 @@ function checkForNewDirection(event) {
   else if (activeKey === KEY.DOWN) {
     snake.head.direction = "down"
   }
-  console.log(snake.head.direction);
+  // console.log(snake.head.direction);
 }
 
 // FILL ME IN
@@ -145,26 +145,34 @@ function moveSnake() {
 }
 
 function hasHitWall() {
-  /* 
-  TODO 8: Should return true if the snake's head has collided with the four walls of the
-  board, false otherwise.
-  
-  HINT: What will the row and column of the snake's head be if this were the case?
-  */
 
-  return false;
+  // TODO 8: Should return true if the snake's head has collided with the four walls of the
+  // board, false otherwise.
+  if (snake.head.row > ROWS || snake.head.column > COLUMNS || snake.head.column < 0 || snake.head.row < 0) {
+    return true;
+  }
+  // HINT: What will the row and column of the snake's head be if this were the case?
+  else {
+    return false;
+  }
 }
 
 function hasCollidedWithApple() {
-  /* 
-  TODO 9: Should return true if the snake's head has collided with the apple, 
-  false otherwise
-  
-  HINT: Both the apple and the snake's head are aware of their own row and column
-  */
 
-  return false;
+  // TODO 9: Should return true if the snake's head has collided with the apple, 
+  // false otherwise
+
+  if (apple.row === snake.head.row && apple.column === snake.head.column) {
+    return true;
+  }
+  // HINT: Both the apple and the snake's head are aware of their own row and column
+
+  else {
+    return false;
+  }
 }
+
+
 
 function handleAppleCollision() {
   // increase the score and update the score DOM element
@@ -289,7 +297,7 @@ function makeSnakeSquare(row, column) {
 function handleKeyDown(event) {
   // TODO 6a: make the handleKeyDown function register which key is pressed
   activeKey = event.which;
-  console.log(activeKey);
+  // console.log(activeKey);
 }
 /* Given a gameSquare (which may be a snakeSquare or the apple), position
  * the gameSquare on the screen.
