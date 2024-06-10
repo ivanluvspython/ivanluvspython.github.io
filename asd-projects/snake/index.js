@@ -113,9 +113,21 @@ function moveSnake() {
   HINT: To complete this TODO we must figure out the next direction, row, and 
   column for each snakeSquare in the snake's body. The parts of the snake are 
   stored in the Array snake.body and each part knows knows its current 
-  column/row properties. 
+  column/row properties. */
   
-  */
+  for (let i = snake.body.length - 1; i >= 0; i--) {
+
+    var snakeSquare = snake.body[i];
+    var nextSnakeSquare = snake.body[i-1];
+    var nextRow = snake.body;
+    var nextColumn = "???";
+    var nextDirection = "???";
+
+    snakeSquare.direction = nextDirection;
+    snakeSquare.row = nextRow;
+    snakeSquare.column = nextColumn;
+    repositionSquare(snakeSquare);
+}
 
   //Before moving the head, check for a new direction from the keyboard input
   checkForNewDirection();
@@ -192,11 +204,23 @@ function handleAppleCollision() {
   If the tail is moving "down", place the next snakeSquare above it.
   etc...
   */
-  var row = 0;
-  var column = 0;
+  var row = snake.tail.row;
+  var column = snake.tail.column;
 
   // code to determine the row and column of the snakeSquare to add to the snake
 
+  if (snake.tail.direction === "up") {
+    row++
+  }
+  if (snake.tail.direction === "down") {
+    row--
+  }
+  if (snake.tail.direction === "left") {
+    column--
+  }
+  if (snake.tail.direction === "right") {
+    column++
+  }
   makeSnakeSquare(row, column);
 }
 
