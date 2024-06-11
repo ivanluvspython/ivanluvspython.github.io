@@ -115,13 +115,13 @@ function moveSnake() {
   stored in the Array snake.body and each part knows knows its current 
   column/row properties. */
   
-  for (let i = snake.body.length - 1; i >= 0; i--) {
+  for (let i = snake.body.length - 1; i >= 1; i--) {
 
     var snakeSquare = snake.body[i];
     var nextSnakeSquare = snake.body[i-1];
-    var nextRow = nextSnakeSquare[i];
-    var nextColumn = nextSnakeSquare[i-1];
-    var nextDirection = "???";
+    var nextRow = nextSnakeSquare.row;
+    var nextColumn = nextSnakeSquare.column;
+    var nextDirection = nextSnakeSquare.direction;
 
     snakeSquare.direction = nextDirection;
     snakeSquare.row = nextRow;
@@ -233,6 +233,7 @@ function hasCollidedWithSnake() {
   head and each part of the snake's body also knows its own row and column.
   
   */
+if ( === )
 
   return false;
 }

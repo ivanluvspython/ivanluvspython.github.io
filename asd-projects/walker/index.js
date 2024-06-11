@@ -35,6 +35,12 @@ function runProgram(){
   Called in response to events.
   */
   function handleEvent(event) {
+    $(document).on('keydown', handleKeyDown);
+
+    // CORE LOGIC...
+    function handleKeyDown(event) {
+      console.log(event);
+    }
 
   }
 
