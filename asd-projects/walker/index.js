@@ -27,7 +27,7 @@ function runProgram() {
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
   $(document).on('keydown', handleKeyDown); // change 'eventType' to the type of event you want to handle
-
+  $(document).on('keyup', handleKeyUp);
 
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
@@ -41,14 +41,13 @@ function runProgram() {
   function newFrame() {
     repositionGameItem()
     redrawgameItem()
-
+    wallCollision()
   }
 
   /* 
   Called in response to events.
   */
   function handleKeyDown(event) {
-    $(document).on('keydown', handleKeyDown);
 
     // CORE LOGIC... 
     if (event.which === KEY.DOWN) {
@@ -64,6 +63,23 @@ function runProgram() {
       walker.ySpeed = -5;
     }
   }
+  function handleKeyUp(event) {
+
+    // CORE LOGIC... 
+    if (event.which === KEY.DOWN) {
+      walker.ySpeed = 0;
+    }
+    if (event.which === KEY.LEFT) {
+      walker.xSpeed = 0;
+    }
+    if (event.which === KEY.RIGHT) {
+      walker.xSpeed = 0;
+    }
+    if (event.which === KEY.UP) {
+      walker.ySpeed = 0;
+    }
+  }
+
 
 
   ////////////////////////////////////////////////////////////////////////////////
@@ -72,13 +88,22 @@ function runProgram() {
   function repositionGameItem() {
     walker.xCor += walker.xSpeed;
     walker.yCor += walker.ySpeed;
-    
-  } 
+
+  }
 
   function redrawgameItem() {
     $("#walker").css("left", walker.xCor);
     $("#walker").css("top", walker.yCor);
-  } 
+  }
+
+  function wallCollision() {
+    var borderX = $("#board").width();
+    var borderY = $("#board").height();
+// If Statements 
+    if ( walker.xCor > borderX){
+      
+    }
+  }
 
   function endGame() {
     {
