@@ -54,7 +54,7 @@ function applyFilter(filterFunction) {
 
 // TODO 7: Create the applyFilterNoBackground function
 function applyFilterNoBackground(filterFunction) {
-  let backcolor = image[0.[0]]
+  let backcolor = image[0][0]
   for (let i = 0; i < image.length; i++) {
     // row is storing an array of strings
     let row = image[i]

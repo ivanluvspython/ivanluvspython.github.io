@@ -8,8 +8,9 @@ body {
     border-color: rgb(255, 255, 255);
     border-radius: 15px;
 }
+
 #all-contents {
-  max-width: 80px;
+    max-width: 80px;
     margin: auto;
 }
 
@@ -18,7 +19,7 @@ nav {
     background: rgb(210, 144, 191);
     margin: 0 auto;
     display: flex;
-    border:solid;
+    border: solid;
     border-radius: 15px;
     padding: 2px;
 }
@@ -33,19 +34,22 @@ h1 {
     margin: 0;
 
 }
+
 #nav-ul {
-    list-style-image:none;
+    list-style-image: none;
 }
+
 .nav-li {
     display: inline-block;
     padding: 10px;
-    
+
 }
+
 a {
     text-decoration: rgb(255, 255, 255);
     color: #ffffff;
- font-size: 30px;
- 
+    font-size: 30px;
+
 }
 
 /* main container area beneath menu */
@@ -53,33 +57,38 @@ main {
     background: rgb(0, 0, 0);
     display: flex;
 }
+
 .sidebar {
     margin-right: 20px;
     padding: 10px;
-    
-    
+
+
 }
+
 .sidebar-img {
     width: 400px;
     max-width: 400px;
     height: auto;
     border: solid;
     border-radius: 15px;
-    
+
 }
+
 .content {
     flex: 1;
     padding: 100px;
 }
+
 .interests {
     border: 4px silver ridge;
     padding: 8px;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
     margin: 0px;
     text-align: center;
-    border:solid;
-    border-radius: 15px ;
+    border: solid;
+    border-radius: 15px;
 }
-         
